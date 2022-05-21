@@ -11,7 +11,20 @@ T = int(input())
 
 for test_case in range(1, T+1):
     N, M = map(int, input().split())
-    numbers = list()
+    numbers = list(map(int, input().split()))
 
-    for i in range(N):
-        numbers.append(input())
+    min = 999999999999
+    max = 0 
+    
+    for i in range(N - M +1):
+        temp = 0
+        for j in range(0,M):
+            temp += numbers[i+j]
+            
+        if temp > max:
+            max = temp
+        if temp < min:
+            min = temp
+    result = max - min
+    
+    print(f'#{test_case} {result}')
