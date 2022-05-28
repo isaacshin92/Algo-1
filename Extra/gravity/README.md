@@ -1,3 +1,8 @@
+### 중력과 2차원 배열의 회전은 불필요하다. 
+> 결국, 가장 높이 쌓여있는 박스의 인덱스를 최대 낙차값에서 뺀 값이 결과값이다. 
+
+```python
+
 import sys
 
 sys.stdin = open('input.txt')
@@ -32,3 +37,5 @@ for test_case in range(1, T + 1):
             result = max_height
 
     print('#{} {}'.format(test_case, result))
+
+```
